@@ -2,14 +2,14 @@
 
 Welcome to the **E-Commerce Data Analysis** project! This project demonstrates the use of Python for analyzing and visualizing e-commerce data to uncover meaningful insights and trends. Let's dive into the tools and techniques used.
 ## *📈Data Analysis Overview*
-- [Monthly Sales Analysis](#Monthly-Sales-Analysis)
-- [Category-wise Sales Analysis](#Category-wise-Sales-Analysis)
-- [Sales Analysis By Sub-Category](#Sales-Analysis-By-Sub-Category)
-- [Monthly Profit Analysis](#Monthly-Profit-Analysis)
-- [Profit by Category Analysis](#Profit-by-Category-Analysis)
-- [Profit by Sub-Category Analysis](#Profit-by-Sub-Category-Analysis)
-- [Sales and Profit by Customer Segment](#Sales-and-Profit-by-Customer-Segment)
-- [Sales-to-Profit Ratio Analysis](#Sales-to-Profit-Ratio-Analysis)
+- [Monthly Sales Analysis](#1%EF%B8%8F⃣-monthly-sales-analysis)
+- [Category-wise Sales Analysis](#2%EF%B8%8F⃣-category-wise-sales-analysis)
+- [Sales Analysis By Sub-Category](#3%EF%B8%8F⃣-sales-analysis-by-sub-category)
+- [Monthly Profit Analysis](#4%EF%B8%8F⃣-monthly-profit-analysis)
+- [Profit by Category Analysis](#5%EF%B8%8F⃣-profit-by-category-analysis)
+- [Profit by Sub-Category Analysis](#6%EF%B8%8F⃣-profit-by-sub-category-analysis)
+- [Sales and Profit by Customer Segment](#7%EF%B8%8F⃣-sales-and-profit-by-customer-segment)
+- [Sales-to-Profit Ratio Analysis](#8%EF%B8%8F⃣-sales-to-profit-ratio-analysis)
 <h2 align="center">⚙️Data Preparation Setup</h2>
 
 ## *1. 📚Libraries Used*
