@@ -28,7 +28,7 @@ import pandas as pd
 import plotly.express as px
 ```
 ## *2. 📂Uploading a CSV File*
-After installing the required libraries, the first step is to upload the dataset. Use the following code to load the CSV file into a DataFrame:
+After installing the required libraries, the first step is to upload the dataset. Use the following code to load the CSV file [Sample](https://github.com/saurabhtikadar/Python-Projects/blob/main/E-Commerce%20Data%20Analysis/Sample.csv) into a DataFrame:
 ```python
 # Load the dataset
 data = pd.read_csv('sample.csv', encoding='latin1')
