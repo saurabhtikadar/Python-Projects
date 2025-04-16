@@ -1,6 +1,15 @@
 <h2 align="center">E-Commerce Data Analysis</h2>
 
 Welcome to the **E-Commerce Data Analysis** project! This project demonstrates the use of Python for analyzing and visualizing e-commerce data to uncover meaningful insights and trends. Let's dive into the tools and techniques used.
+## *📈Data Analysis Overview*
+- [Monthly Sales Analysis](#Monthly-Sales-Analysis)
+- [Category-wise Sales Analysis](#Category-wise-Sales-Analysis)
+- [Sales Analysis By Sub-Category](#Sales-Analysis-By-Sub-Category)
+- [Monthly Profit Analysis](#Monthly-Profit-Analysis)
+- [Profit by Category Analysis](#Profit-by-Category-Analysis)
+- [Profit by Sub-Category Analysis](#Profit-by-Sub-Category-Analysis)
+- [Sales and Profit by Customer Segment](#Sales-and-Profit-by-Customer-Segment)
+- [Sales-to-Profit Ratio Analysis](#Sales-to-Profit-Ratio-Analysis)
 <h2 align="center">⚙️Data Preparation Setup</h2>
 
 ## *1. 📚Libraries Used*
@@ -120,9 +129,64 @@ fig.update_traces(textposition='outside')
 fig.show()
 ```
 Result:![Image](https://github.com/user-attachments/assets/293b0574-d656-47cf-b6b3-c8a7b737a401)
+## *4️⃣ Monthly Profit Analysis*
+Analyzing monthly profit helps identify trends in profitability over time. A line chart visualizes these trends effectively.
+```python
+# Group data by Month and calculate total profit
+profit_by_month = data.groupby('Month')['Profit'].sum().reset_index()
 
+# Create a Line Chart using Plotly
+fig = px.line(profit_by_month, 
+              x="Month", 
+              y="Profit",
+              title="Monthly Profit Trend", 
+              labels={"Profit": "Total Profit"})
 
-## *4️⃣ Sales and Profit by Customer Segment*
+# Show the plot
+fig.show()
+```
+Result:![Image](https://github.com/user-attachments/assets/31a49e72-7084-4552-a14b-1162fb93a833)
+## *5️⃣ Profit by Category Analysis*
+This analysis provides insights into how profits are distributed across different categories. A pie chart is used to visualize the contribution of each category to the total profit.
+```python
+# Group data by category and calculate total profit
+profit_by_category = data.groupby('Category')['Profit'].sum().reset_index()
+
+# Create a Pie Chart using Plotly
+fig = px.pie(profit_by_category, 
+             names="Category", 
+             values="Profit", 
+             title="Profit Distribution by Category", 
+             labels={"Profit": "Total Profit"},
+             hole=0.4)  # Optional: Adds a donut-like hole for better visualization
+
+# Optional: Customize text to show outside the pie chart
+fig.update_traces(textposition='outside', textinfo='label+percent')
+
+# Show the plot
+fig.show()
+```
+Result:![Image](https://github.com/user-attachments/assets/21db4e9c-0c94-40ee-af9f-69e96d38d03d)
+## *6️⃣ Profit by Sub-Category Analysis*
+To dive deeper into profit trends, we analyze the profit by sub-categories. A bar chart is used to compare the profit performance of individual sub-categories, helping identify high and low-profit contributors.
+```python
+# Group data by sub-category and calculate total profit
+profit_by_sub_category = data.groupby('Sub-Category')['Profit'].sum().reset_index()
+
+# Create a Bar Graph using Plotly
+fig = px.bar(profit_by_sub_category, 
+             x="Sub-Category", 
+             y="Profit", 
+             title="Profit by Sub-Category",
+             labels={"Profit": "Total Profit"},
+             color="Sub-Category",  # Optional: Color bars based on profit values
+             text="Profit")  # Display profit values on bars
+
+# Show the plot
+fig.show()
+```
+Result:![Image](https://github.com/user-attachments/assets/ad4667f1-9850-4de6-bfaf-aaf64a846634)
+## *7️⃣ Sales and Profit by Customer Segment*
 
 Analyze how sales and profit vary across customer segments using a **grouped bar chart**.
 This helps in identifying the most profitable and highest-revenue-generating segments.
@@ -152,7 +216,7 @@ fig.show()
 Result:![Image](https://github.com/user-attachments/assets/b4fd5b2d-92c4-4b60-bb49-066f3b81646d)
 
 
-## *5️⃣ Sales-to-Profit Ratio Analysis*
+## *8️⃣ Sales-to-Profit Ratio Analysis*
 
 The Sales-to-Profit Ratio measures how efficiently sales are converted into profit.
 A higher ratio indicates lower profitability margins, while a lower ratio reflects better efficiency.
